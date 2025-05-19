@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../assets/style.css";
 
 export default function LoginPage() {
     const [email, setEmail] = useState("");
@@ -35,7 +36,7 @@ export default function LoginPage() {
     };
 
     return (
-        <div style={{ maxWidth: "400px", margin: "3rem auto" }}>
+        <div className="container">
             <h2>Login</h2>
             {error && <p style={{ color: "red" }}>{error}</p>}
             <form onSubmit={handleSubmit}>
@@ -45,7 +46,7 @@ export default function LoginPage() {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    style={inputStyle}
+                    className="input"
                 />
                 <input
                     type="password"
@@ -53,28 +54,10 @@ export default function LoginPage() {
                     required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    style={inputStyle}
+                    className="input"
                 />
-                <button type="submit" style={buttonStyle}>Login</button>
+                <button type="submit" className="button">Login</button>
             </form>
         </div>
     );
 }
-
-const inputStyle = {
-    display: "block",
-    width: "100%",
-    padding: "10px",
-    marginBottom: "1rem",
-    fontSize: "16px",
-};
-
-const buttonStyle = {
-    width: "100%",
-    padding: "10px",
-    fontSize: "16px",
-    backgroundColor: "#333",
-    color: "#fff",
-    border: "none",
-    cursor: "pointer",
-};
