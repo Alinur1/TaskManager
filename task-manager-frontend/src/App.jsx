@@ -1,9 +1,9 @@
 import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import DashboardPage from './pages/DashboardPage'
 import PrivateRoute from './components/PrivateRoute'
-import { Routes, Route } from 'react-router-dom'
 import './App.css'
 
 function App() {

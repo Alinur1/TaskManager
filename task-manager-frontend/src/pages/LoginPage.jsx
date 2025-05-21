@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+
 import "../assets/style.css";
 
 export default function LoginPage() {
@@ -58,6 +59,12 @@ export default function LoginPage() {
                 />
                 <button type="submit" className="button">Login</button>
             </form>
+            <p style={{ marginTop: "1rem" }}>
+                Don’t have an account?{" "}
+                <Link to="/register" style={{ color: "#007bff", textDecoration: "none" }}>
+                    Register here
+                </Link>
+            </p>
         </div>
     );
 }
